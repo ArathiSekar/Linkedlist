@@ -29,6 +29,16 @@ class createLinkedlist:
             self.tail = self.tail.next
     
    
+    def to_list(self):
+    # Write function to turn Linked List into Python List
+        python_list = []
+        current_node= self.head
+        while(current_node):
+            python_list.append(current_node.value)
+            current_node = current_node.next
+        
+        print(python_list)    
+
 ll = createLinkedlist()
 
 #ll.append(1)
@@ -38,6 +48,7 @@ input_list = [1,2,3,4,5]
 for i in input_list:
     ll.append(i)
 
+ll.to_list()
 current_node = ll.head
 
 while(current_node is not None):
